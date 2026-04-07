@@ -4,6 +4,7 @@ import { CAREER_STATS } from '../lib/utils.js';
 
 // Constante de revalidación para Next.js App Router (1 Hora de Cache)
 export const revalidate = 3600;
+export const dynamic = 'force-dynamic';
 
 export default async function Page() {
   let liveData = {

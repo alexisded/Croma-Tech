@@ -1,4 +1,4 @@
-import NewsClient from '../../components/NewsClient';
+import NewsClient from '../../components/NewsClient.jsx';
 
 export const metadata = {
   title: 'CR7 Noticias & Hub IA',

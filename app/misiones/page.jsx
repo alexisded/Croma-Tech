@@ -1,4 +1,4 @@
-import MissionsClient from '../../components/MissionsClient';
+import MissionsClient from '../../components/MissionsClient.jsx';
 
 export const metadata = {
   title: 'Misiones Leyenda CR7',

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Newspaper, Clock, Zap, AlertCircle, X, ChevronLeft, Bot } from 'lucide-react';
 import { askGemini, HAS_API_KEY } from '../lib/ai.js';
 import { setDynamicSEO } from '../lib/seo.js';
-import AdSpace from '../components/AdSpace.jsx';
+import AdSpace from './AdSpace.jsx';
 
 const FALLBACK_NEWS = [
   {

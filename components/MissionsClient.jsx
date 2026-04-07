@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Target, Star, Gift, CheckCircle, Lock, Zap, X, Trophy } from 'lucide-react';
 import { askGemini, HAS_API_KEY } from '../lib/ai.js';
-import AdSpace from '../components/AdSpace.jsx';
+import AdSpace from './AdSpace.jsx';
 
 const INITIAL_MISSIONS = [
   { id: 1, title: 'El Bautizo', desc: 'Abre la galería de goles y mira el primer gol oficial.', xp: 300, isCompleted: false },

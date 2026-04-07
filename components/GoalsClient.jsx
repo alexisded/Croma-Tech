@@ -2,7 +2,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Search, Filter, Trophy, Clock, Calendar, ChevronLeft, ChevronRight, X, Bot, Zap, RefreshCw } from 'lucide-react';
 import { GOALS_DATA, getGoalTypeIcon, formatNumber } from '../lib/utils.js';
-import AdSpace from '../components/AdSpace.jsx';
+import AdSpace from './AdSpace.jsx';
 
 const PAGE_SIZE = 9;
 const ALL_TEAMS = ['Todos', 'Real Madrid', 'Manchester United', 'Juventus', 'Al-Nassr', 'Portugal', 'Sporting CP'];

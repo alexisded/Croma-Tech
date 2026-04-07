@@ -1,4 +1,4 @@
-import GoalsClient from '../../components/GoalsClient';
+import GoalsClient from '../../components/GoalsClient.jsx';
 
 export const metadata = {
   title: 'CR7 - Galería Histórica de Goles',

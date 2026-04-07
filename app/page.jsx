@@ -1,6 +1,6 @@
-import HomeClient from '../components/HomeClient';
-import { askGemini, HAS_API_KEY } from '../lib/ai';
-import { CAREER_STATS } from '../lib/utils';
+import HomeClient from '../components/HomeClient.jsx';
+import { askGemini, HAS_API_KEY } from '../lib/ai.js';
+import { CAREER_STATS } from '../lib/utils.js';
 
 // Constante de revalidación para Next.js App Router (1 Hora de Cache)
 export const revalidate = 3600;

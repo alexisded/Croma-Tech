@@ -1,5 +1,5 @@
 import './globals.css';
-import { ClientProvider } from '../components/ClientProvider';
+import { ClientProvider } from '../components/ClientProvider.jsx';
 import { Suspense } from 'react';
 
 export const metadata = {

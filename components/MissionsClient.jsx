@@ -13,17 +13,27 @@ const INITIAL_MISSIONS = [
 ];
 
 export default function Missions({ xp, onGainXp }) {
-  const [missions, setMissions] = useState(() => {
-    const saved = localStorage.getItem('cr7_missions');
-    return saved ? JSON.parse(saved) : INITIAL_MISSIONS;
-  });
+  const [missions, setMissions] = useState(INITIAL_MISSIONS);
 
   const [unlockedCard, setUnlockedCard] = useState(null);
   const [isGenerating, setIsGenerating] = useState(false);
 
   useEffect(() => {
+    // Carga diferida para evitar errores de SSR/Vercel build
+    const saved = localStorage.getItem('cr7_missions');
+    if (saved) {
+      try {
+        setMissions(JSON.parse(saved));
+      } catch (e) {
+        console.error("Error al cargar misiones de localStorage", e);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem('cr7_missions', JSON.stringify(missions));
   }, [missions]);
+
 
   const handleComplete = async (id, missionXp) => {
     if (missions.find(m => m.id === id).isCompleted) return;

@@ -11,8 +11,11 @@ export default function AdSpace({ format = 'banner', className = '' }) {
   };
 
   // Next.js usa process.env. Envolvemos en try-catch por seguridad de RSC
-  let adClient = '';
-  try { adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || process.env.VITE_ADSENSE_CLIENT_ID; } catch(e) {}
+  let adClient = 'ca-pub-6834379350484880'; // Fallback oficial Alexis
+  try { 
+      const envId = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || process.env.VITE_ADSENSE_CLIENT_ID;
+      if (envId) adClient = envId;
+  } catch(e) {}
   const isProdAd = !!adClient;
 
   useEffect(() => {

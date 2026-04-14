@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Trophy, Target, Zap, TrendingUp, Star, Award, ChevronRight, Flame, RefreshCw, AlertCircle } from 'lucide-react';
 import { CAREER_STATS, TEAM_STATS, formatNumber } from '../lib/utils.js';
+import AdSpace from './AdSpace.jsx';
 
 function StatCard({ label, value, icon: Icon, color = 'text-primary', suffix = '' }) {
   return (
@@ -101,7 +102,10 @@ export default function HomeClient({ initialLiveData, hasKey }) {
         </div>
       </div>
 
+      <div className="py-2"><AdSpace format="banner" /></div>
+
       {/* Match Hub */}
+
       <div>
         <h2 className="text-2xl font-black text-foreground mb-4 flex gap-2 items-center" style={{fontFamily:'Bebas Neue'}}>
           Match Hub (Server Cached) <Zap className="w-6 h-6 text-primary" />

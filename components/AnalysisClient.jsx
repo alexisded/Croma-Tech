@@ -2,6 +2,8 @@
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, CartesianGrid, Legend } from 'recharts';
 import { TEAM_STATS, CAREER_STATS } from '../lib/utils.js';
+import AdSpace from './AdSpace.jsx';
+
 
 const SEASON_DATA = [
   { season: '03/04', goals: 5 }, { season: '04/05', goals: 9 }, { season: '05/06', goals: 12 },
@@ -69,7 +71,10 @@ export default function Analysis() {
         ))}
       </div>
 
+      <div className="py-2"><AdSpace format="banner" /></div>
+
       {/* Season evolution */}
+
       <ChartCard title="Evolución por Temporada">
         <ResponsiveContainer width="100%" height={240}>
           <LineChart data={SEASON_DATA}>

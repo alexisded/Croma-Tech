@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        <meta name="google-site-verification" content="Of2Llk9svxrkrQk9E19NFAqSpxPe0fVKTY3VgR5Zo0o" />
+        <meta name="google-site-verification" content="dtgSjVROhWpPDnbFXEaPr1xa98Igp_l9T1LquR_laf4" />
         <Script
           id="adsense-init"
           async
